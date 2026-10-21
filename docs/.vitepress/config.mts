@@ -6,18 +6,12 @@ export default defineConfig({
   base: '/awesome/',
   title: "Awesome",
   description: "描述",
-
   themeConfig: {
     logo: '/icon.png',
     siteTitle: 'Awesome',
     search: {
       provider: 'local'
     },
-    footer: {
-      message: 'Released under the CC-BY-SA-4.0 license.',
-      copyright: `Copyright © 2018-${new Date().getFullYear()} <a href="https://github.com/twinklely/awesome">Awesome</a>`
-    },
-    logo: '/icon.png',
     docFooter: {
       prev: '上一篇',
       next: '下一篇'
@@ -30,12 +24,10 @@ export default defineConfig({
       pattern: 'https://github.com/twinklely/awesome/edit/main/docs/:path',
       text: '在 GitHub 编辑'
     },
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
       { text: '更多', link: '/info/base' }
     ],
-
     sidebar: [
       {
         text: '通用',
@@ -73,13 +65,12 @@ export default defineConfig({
         ],
       }
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/twinklely/awesome' }
     ],
     footer: {
-      message: '依据 MIT 许可证发布',
-      copyright: '版权所有 © 2019-' + new Date().getFullYear()
+      message: 'Released under the CC-BY-SA-4.0 license.',
+      copyright: `Copyright © 2018-${new Date().getFullYear()} <a href="https://github.com/twinklely/awesome">Awesome</a>`
     },
     lastUpdated: {
       text: '更新于',
