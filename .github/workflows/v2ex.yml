@@ -3,7 +3,7 @@ name: V2ex
 #on:
  # schedule:
     # 可自定义 cron 表达式
-    #- cron: "0 2 * * *"
+    #- cron: "0 0 10,17 ? * *"
 on:
   workflow_dispatch:
 
@@ -15,4 +15,4 @@ jobs:
         with:
           webhook: ${{ vars.WEBHOOK }}
           secret: ${{ secrets.SECRET }}
-          count: 6
+          count: 20
