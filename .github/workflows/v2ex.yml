@@ -1,11 +1,12 @@
 name: V2ex
 
 #on:
- # schedule:
-    # 可自定义 cron 表达式
-    #- cron: "0 0 10,17 ? * *"
+
 on:
-  workflow_dispatch:
+ schedule:
+    - cron: "0 10 * * *"
+    - cron: "0 17 * * *"
+ workflow_dispatch:
 
 jobs:
   build:
