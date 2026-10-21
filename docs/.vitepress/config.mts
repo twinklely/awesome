@@ -1,12 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { withDuxTheme } from '@duxweb/vitepress-theme/config'
 
-// docs/.vitepress/config.js
-export default {
-  base: '/awesome/', // 替换为你的 GitHub 仓库名称
-  // ... 其他配置
-}
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/awesome/',
