@@ -1,0 +1,14 @@
+docs/.vitepress/config.mts
+  h_20abf1cbb6bcb3 72-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "814a5e33a7c7b17ad5125d1f4f8fa3727c9f6d73",
+  "prompts": {},
+  "humans": {
+    "h_20abf1cbb6bcb3": {
+      "author": "justin_xiao <justin_xiao@sekorm.com>"
+    }
+  }
+}
