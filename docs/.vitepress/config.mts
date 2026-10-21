@@ -24,7 +24,7 @@ export default defineConfig({
       next: '下一篇'
     },
     editLink: {
-      pattern: 'https://github.com/doocs/advanced-java/edit/main/docs/:path',
+      pattern: 'https://github.com/twinklely/awesome/edit/main/docs/:path',
       text: '在 GitHub 编辑'
     },
     // https://vitepress.dev/reference/default-theme-config
