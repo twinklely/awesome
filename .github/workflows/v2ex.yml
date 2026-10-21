@@ -4,6 +4,8 @@ name: V2ex
  # schedule:
     # 可自定义 cron 表达式
     #- cron: "0 2 * * *"
+on:
+  workflow_dispatch:
 
 jobs:
   build:
