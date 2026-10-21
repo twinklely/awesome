@@ -3,7 +3,7 @@ import { withDuxTheme } from '@duxweb/vitepress-theme/config'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/awesome/',
+  //base: '/awesome/',
   title: "Awesome",
   description: "描述",
   themeConfig: {
