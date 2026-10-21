@@ -1,8 +1,12 @@
 import { defineConfig } from 'vitepress'
 import { withDuxTheme } from '@duxweb/vitepress-theme/config'
 
+// docs/.vitepress/config.js
+
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/awesome/',
   lang: 'en-US',
   title: "首页",
   description: "描述",
