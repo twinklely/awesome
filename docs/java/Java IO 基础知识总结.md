@@ -1,8 +1,7 @@
-## Java IO 基础知识总结 ##
+# JavaIO基础知识总结
 
----
 
-### [IO 流简介](#io-流简介)
+## [IO 流简介](#io-流简介)
 
 IO 即`Input/Output`，输入和输出。数据输入到计算机内存的过程即输入，反之输出到外部存储（比如数据库，文件，远程主机）的过程即输出。数据传输过程类似于水流，因此称为 IO 流。IO 流在 Java 中分为输入流和输出流，而根据数据的处理方式又分为字节流和字符流。
 
@@ -11,9 +10,9 @@ Java IO 流的 40 多个类都是从如下 4 个抽象类基类中派生出来�
 - `InputStream`/`Reader`: 所有的输入流的基类，前者是字节输入流，后者是字符输入流。
 - `OutputStream`/`Writer`: 所有输出流的基类，前者是字节输出流，后者是字符输出流。
 
-### [字节流](#字节流)
+## [字节流](#字节流)
 
-#### [InputStream（字节输入流）](#inputstream-字节输入流)
+### [InputStream（字节输入流）](#inputstream-字节输入流)
 
 `InputStream`用于从源头（通常是文件）读取数据（字节信息）到内存中，`java.io.InputStream`抽象类是所有字节输入流的父类。
 
@@ -98,7 +97,7 @@ input.close();
 
 另外，用于序列化和反序列化的类必须实现`Serializable`接口，对象中如果有属性不想被序列化，使用`transient`修饰。
 
-#### [OutputStream（字节输出流）](#outputstream-字节输出流)
+### [OutputStream（字节输出流）](#outputstream-字节输出流)
 
 `OutputStream`用于将数据（字节信息）写入到目的地（通常是文件），`java.io.OutputStream`抽象类是所有字节输出流的父类。
 
@@ -153,7 +152,7 @@ Person person = new Person("Guide哥", "JavaGuide作者");
 output.writeObject(person);
 ```
 
-### [字符流](#字符流)
+## [字符流](#字符流)
 
 不管是文件读写还是网络发送接收，信息的最小存储单元都是字节。**那为什么 I/O 流操作要分为字节流操作和字符流操作呢？**
 
@@ -182,7 +181,7 @@ The content read from file:§å®¶å¥½
 
 Unicode 本身只是一种字符集，它为每个字符分配一个唯一的数字编号，并没有规定具体的存储方式。UTF-8、UTF-16、UTF-32 都是 Unicode 的编码方式，它们使用不同的字节数来表示 Unicode 字符。例如，UTF-8 :英文占 1 字节，中文占 3 字节。
 
-#### [Reader（字符输入流）](#reader-字符输入流)
+### [Reader（字符输入流）](#reader-字符输入流)
 
 `Reader`用于从源头（通常是文件）读取数据（字符信息）到内存中，`java.io.Reader`抽象类是所有字符输入流的父类。
 
@@ -234,7 +233,7 @@ The actual number of bytes skipped:3
 The content read from file:我是Guide。
 ```
 
-#### [Writer（字符输出流）](#writer-字符输出流)
+### [Writer（字符输出流）](#writer-字符输出流)
 
 `Writer`用于将数据（字符信息）写入到目的地（通常是文件），`java.io.Writer`抽象类是所有字符输出流的父类。
 
@@ -275,7 +274,7 @@ try (Writer output = new FileWriter("output.txt")) {
 
 ![](https://oss.javaguide.cn/github/javaguide/java/image-20220419155802288.png)
 
-### [字节缓冲流](#字节缓冲流)
+## [字节缓冲流](#字节缓冲流)
 
 IO 操作是很消耗性能的，缓冲流将数据加载至缓冲区，一次性读取/写入多个字节，从而避免频繁的 IO 操作，提高流的传输效率。
 
@@ -392,7 +391,7 @@ void copy_pdf_to_another_pdf_with_byte_array_stream() {
 }
 ```
 
-#### [BufferedInputStream（字节缓冲输入流）](#bufferedinputstream-字节缓冲输入流)
+### [BufferedInputStream（字节缓冲输入流）](#bufferedinputstream-字节缓冲输入流)
 
 `BufferedInputStream`从源头（通常是文件）读取数据（字节信息）到内存的过程中不会一个字节一个字节的读取，而是会先将读取到的字节存放在缓存区，并从内部缓冲区中单独读取字节。这样大幅减少了 IO 次数，提高了读取效率。
 
@@ -422,7 +421,7 @@ class BufferedInputStream extends FilterInputStream {
 
 缓冲区的大小默认为**8192**字节，当然了，你也可以通过`BufferedInputStream(InputStream in, int size)`这个构造方法来指定缓冲区的大小。
 
-#### [BufferedOutputStream（字节缓冲输出流）](#bufferedoutputstream-字节缓冲输出流)
+### [BufferedOutputStream（字节缓冲输出流）](#bufferedoutputstream-字节缓冲输出流)
 
 `BufferedOutputStream`将数据（字节信息）写入到目的地（通常是文件）的过程中不会一个字节一个字节的写入，而是会先将要写入的字节存放在缓存区，并从内部缓冲区中单独写入字节。这样大幅减少了 IO 次数，提高了效率
 
@@ -437,11 +436,11 @@ try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("o
 
 类似于`BufferedInputStream`，`BufferedOutputStream`内部也维护了一个缓冲区，并且，这个缓存区的大小也是**8192**字节。
 
-### [字符缓冲流](#字符缓冲流)
+## [字符缓冲流](#字符缓冲流)
 
 `BufferedReader`（字符缓冲输入流）和`BufferedWriter`（字符缓冲输出流）类似于`BufferedInputStream`（字节缓冲输入流）和`BufferedOutputStream`（字节缓冲输入流），内部都维护了一个字节数组作为缓冲区。不过，前者主要是用来操作字符信息。
 
-### [打印流](#打印流)
+## [打印流](#打印流)
 
 下面这段代码大家经常使用吧？
 
@@ -462,7 +461,7 @@ public class PrintWriter extends Writer {
 }
 ```
 
-### [随机访问流](#随机访问流)
+## [随机访问流](#随机访问流)
 
 这里要介绍的随机访问流指的是支持随意跳转到文件的任意位置进行读写的`RandomAccessFile`。
 
@@ -540,12 +539,3 @@ randomAccessFile.write(new byte[]{'H', 'I', 'J', 'K'});
 ![](https://oss.javaguide.cn/github/javaguide/java/image-20220428104115362.png)
 
 `RandomAccessFile`的实现依赖于`FileDescriptor`(文件描述符) 和`FileChannel`（内存映射文件）。
-
-### [写在最后](#写在最后)
-
-感谢你能看到这里，也希望这篇文章对你有点用。
-
-JavaGuide 坚持更新 6 年多，近 6000 次提交、600+ 位贡献者一起打磨。如果这些内容对你有帮助，非常欢迎点个免费的 Star 支持下（完全自愿，觉得有收获再点就好）：[GitHub](https://github.com/Snailclimb/JavaGuide)|[Gitee](https://gitee.com/SnailClimb/JavaGuide)。
-
-如果你想要付费支持/面试辅导（比如实战项目、简历优化、一对一提问、高频考点突击资料等）的话，欢迎了解我的[知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)。已经坚持维护六年，内容持续更新，虽白菜价（0.4元/天）但质量很高，主打一个良心！
-![JavaGuide 公众号](https://oss.javaguide.cn/github/javaguide/gongzhonghao-javaguide.png)

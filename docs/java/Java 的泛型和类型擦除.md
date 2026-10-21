@@ -1,10 +1,4 @@
-| Java 的泛型和类型擦除 |
-| Java | Java |
-| Java |
-| robot |
-| Java |
-| java-generics-type-erasure |
-|  |
+# Java的泛型和类型擦除
 
 ### 核心要点
 [](#核心要点)

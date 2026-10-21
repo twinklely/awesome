@@ -1,10 +1,4 @@
-| Java 的 happens-before 规则 |
-| Java | Java |
-| Java |
-| robot |
-| Java |
-| java-happens-before-rules |
-|  |
+# Java的happens-before规则
 
 ### 要点提炼
 [](#要点提炼)

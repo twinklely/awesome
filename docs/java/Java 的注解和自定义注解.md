@@ -1,10 +1,4 @@
-| JVM 调优实践（堆大小、GC 参数、监控工具） |
-| Java 垃圾回收 | Java | 垃圾回收 |
-| Java | 垃圾回收 |
-| robot |
-| Java |
-| jvm-tuning-practice-heap-gc-monitoring |
-|  |
+# Java的注解和自定义注解
 
 ### 要点提炼
 [](#要点提炼)

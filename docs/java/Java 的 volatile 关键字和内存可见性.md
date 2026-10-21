@@ -1,13 +1,4 @@
----
-title: Java 的 volatile 关键字和内存可见性
-tags:
-  - Java
-  - 内存管理
-status: robot
-class: Java
-slug: java-volatile-keyword-memory-visibility
-ref:
----
+# Java的volatile关键字和内存可见性
 
 ### 要点提炼
 [](#要点提炼)
