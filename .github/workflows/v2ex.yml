@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: yanglbme/v2ex-action@main
         with:
-          webhook: ${{ secrets.WEBHOOK }}
+          webhook: ${{ vars.WEBHOOK }}
           secret: ${{ secrets.SECRET }}
           count: 6
