@@ -1,0 +1,38 @@
+docs/index.md
+  h_20abf1cbb6bcb3 7-8,11-12,14-15,19-27
+"docs/java/Java 的 JDBC 连接池实现原理（HikariCP）.md"
+  h_20abf1cbb6bcb3 1-2
+docs/go/Go的goroutine-和线程有什么区别.md
+  h_20abf1cbb6bcb3 1-2
+"docs/java/Java 的 volatile 关键字和内存可见性.md"
+  h_20abf1cbb6bcb3 1
+"docs/jvm/JVM 调优实践（堆大小、GC 参数、监控工具）.md"
+  h_20abf1cbb6bcb3 1
+"docs/java/Java 的泛型和类型擦除.md"
+  h_20abf1cbb6bcb3 1
+"docs/java/Java IO 基础知识总结.md"
+  h_20abf1cbb6bcb3 1
+"docs/java/Java 的注解和自定义注解.md"
+  h_20abf1cbb6bcb3 1
+"docs/java/Java 的 happens-before 规则.md"
+  h_20abf1cbb6bcb3 1
+docs/info/base.md
+  h_20abf1cbb6bcb3 1-376
+"docs/go/Go的GC采用什么算法？如何减少 GC 压力？.md"
+  h_20abf1cbb6bcb3 1-2
+docs/.vitepress/config.mts
+  h_20abf1cbb6bcb3 7,12,18,25-28,36,41,44,78,81-82
+"docs/spring/Spring AOP 的实现原理（JDK 动态代理 vs CGLIB）.md"
+  h_20abf1cbb6bcb3 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "0ab824ea3d2d88ef46e91de802aa9fe8ab224cb1",
+  "prompts": {},
+  "humans": {
+    "h_20abf1cbb6bcb3": {
+      "author": "justin_xiao <justin_xiao@sekorm.com>"
+    }
+  }
+}
