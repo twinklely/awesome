@@ -4,9 +4,9 @@ name: V2ex
 
 on:
  schedule:
-    - cron: "0 10 * * *"
-    - cron: "0 17 * * *"
-    - cron: "0 19 * * *"
+    - cron: "0 02 * * *"
+    - cron: "0 09 * * *"
+    - cron: "0 11 * * *"
  workflow_dispatch:
 
 jobs:
